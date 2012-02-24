@@ -1,0 +1,44 @@
+spkmus
+======
+
+This script makes it easy to write songs to be played using any computer's
+good ol' speaker. It reads notes and their duration in plain written language
+and calculates their proper frequency and duration for a given BPM (beats per
+minute).
+
+It also features a rough-but-functional client-server model, using perl scripts
+that start the main script. This implementation should be considered only a
+proof-of-concept that allows multiple computers to play different scores in a 
+synchronized way.
+
+Please note that currently only note names written in portuguese are supported.
+
+
+
+Requirements
+=============
+
+- beep: the "beep" command should be available and in your $PATH. On debian
+systems this can be installed by issuing the "apt-get install beep" command.
+
+- Working PC Speaker: This is rather obvious, but nowadays some systems 
+(particularly notebooks) are shipped without a true pc speaker. Also many
+distros do not load the "pcspkr" module. If you find you have no sound, you
+may try this command:
+
+modprobe pcspkr
+
+
+
+
+
+How to Use
+==========
+
+Scores are currently written in the main spkmus script, and there are a couple
+of functional examples inside. You should run the script after uncommenting the
+appropriate song name on the beggining of the script.
+
+After that you should run the script with the following command:
+
+./spkmus.sh
